@@ -1,0 +1,15 @@
+<p>Organization Details Component</p>
+
+<!-- IS LOADING -->
+<div *ngIf="loadingOrganization.isLoading">
+  Is loading...
+</div>
+<!-- IS NOT FOUND -->
+<div *ngIf="loadingOrganization.isLoading === false && loadingOrganization.organization === null">
+  Not found
+</div>
+<!-- IS FOUND -->
+<div *ngIf="loadingOrganization.isLoading === false && loadingOrganization.organization as organization">
+  {{organization.name}}
+  <a [routerLink]="['/organization', organization.name, 'webhooks']">webhooks</a>
+</div>

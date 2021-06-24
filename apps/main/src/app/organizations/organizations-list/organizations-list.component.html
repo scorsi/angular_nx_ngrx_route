@@ -1,0 +1,4 @@
+<p>Organizations List Component</p>
+<ul *ngFor="let organization of organizations$ | async">
+  <li><a [routerLink]="['/organization', organization.name]">{{organization.name}}</a></li>
+</ul>

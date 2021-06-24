@@ -1,0 +1,4 @@
+<p>Webhooks List Component</p>
+<ul *ngFor="let webhook of webhooks$ | async">
+  <li><a [routerLink]="['/organization', organizationName, 'webhook', webhook.id]">{{webhook.name}}</a></li>
+</ul>
